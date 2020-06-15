@@ -8,17 +8,38 @@ It is inspired by the Scala/JVM project ```scalanlp/breeze``` ("soyosoyo" is the
   + to make full use of JVM optimizations and speed benefits
   + to be fully accessible from commercial scientific programming packages such as Mathematica and Matlab. 
   
-There are, of course, syntactic and algorithmic benefits that are only realizable in a backwards-compatibility-breaking language like Scala. Soyosoyo aims to capture these benefits by providing idiomatic Scala wrapper functions for each function, at the appropriate level. However, 
+There are, of course, syntactic and algorithmic benefits that are only realizable in a backwards-compatibility-breaking language like Scala. Soyosoyo aims to capture these benefits by providing idiomatic Scala wrapper functions for each function, at each hierarchical level. The functionality of every package should be extensible and usable, in an idomatic function, with all three target JVM languages (Java, Scala, Kotlin).
 
-In order to avoid Scala version issues, packages are divided relatively finely and hierarchically, and use different JVM languages and mechanisms:
+In order to encapsulate version and compilation target issues, packages are divided relatively finely and hierarchically, and use JVM features which are cross-accessible:
 
-1. ```soyosoyo-base``` [Kotlin and Java, built on Gradle]: core data types, and functionality:
++ ```soyosoyo-base``` [Kotlin and Java, built on Gradle]: core data types, and functionality:
     + Immutable (and mutable) array types as light wrappers around Kotlin ArrayShort, ArrayInt, ArrayLong, ArrayFloat, ArrayDouble, ArrayBoolean. 
     + In order to prevent autoboxing ((2)2 above) this module must be Kotlin, given that Scala 3/Dotty will seemingly deprecate @specialized annotations, and given that Java cannot control autoboxing unless you compile against JVM5 (pre boxing).
-    + Provides wrapper for [Apache commons-math](http://commons.apache.org/proper/commons-math/developers.html) (and [netlib-java update](https://github.com/fommil/netlib-java), if necessary)
-    + Provides light wrapper for Java primitive collections (?[]())
-1. ```soyosoyo-base-kotlin``` [Kotlin, built on Gradle]:: Provides Kotlin-specific syntactic sugar and slicing functions. Inherit from this instead of ```soyosoyo-base``` if downstream package is Kotlin-based.
-1. ```soyosoyo-base-scala```: Provides Scala-specific syntactic sugar and slicing functions. Inherit from this instead of ```soyosoyo-base``` if downstream package is Scala-based
+    + Provides basic matrix functions (aim for BLAS equivalent)... basically provides wrapper for [Apache commons-math](http://commons.apache.org/proper/commons-math/developers.html) (and [netlib-java update](https://github.com/fommil/netlib-java), if necessary)
+    + Provides light wrapper for Java primitive collections (?based on [Eclipse collections](https://www.eclipse.org/collections/))
+    
++ ```soyosoyo-base-kotlin``` [Kotlin, built on Gradle]:: Provides Kotlin-specific syntactic sugar and slicing functions. Inherit from this instead of ```soyosoyo-base``` if downstream package is Kotlin-based.
+
++ ```soyosoyo-base-scala```: Provides Scala-specific syntactic sugar and slicing functions. Inherit from this instead of ```soyosoyo-base``` if downstream package is Scala-based (e.g. ```soyosoyo-graphics-scala```).
+
+     + ```soyosoyo-graphics-scala``` [Scala, Kotlin and Java, built on SBT]: provide visualization fuctions, aim to reproduce basic functionality of the Wolfram Mathematica graphics libraries, with publication-quality and highly-specifiable vector and bitmap outputs. Provide syntactic sugar for Scala.
+     
+     + ```soyosoyo-graphics-java``` [Java, built on Gradle]: syntactic sugar for ```soyosoyo-graphics-scala``` without scala fanciness
+
+     + ```soyosoyo-graphics-kotlin``` [Kotlin, built on Gradle]: syntactic sugar for ```soyosoyo-graphics-scala``` without scala fanciness
+
+     + ```soyosoyo-stats-scala``` [Scala, Kotlin and Java, built on SBT]: provide statistical fuctions, aim to reproduce basic functionality of the Wolfram Mathematica statistic libraries with fine-grained options framework, reasonable defaults, and informative output.
+     
+     + ```soyosoyo-stats-java``` [Java, built on Gradle]: syntactic sugar for ```soyosoyo-graphics-scala``` without scala fanciness
+
+     + ```soyosoyo-stats-kotlin``` [Kotlin, built on Gradle]: syntactic sugar for ```soyosoyo-graphics-scala``` without scala fanciness
+
+     + ```soyosoyo-ml-scala``` [Scala, Kotlin and Java, built on SBT]: provide machine learning functions. ?Based on [DL4J](https://deeplearning4j.org/). Aims to provide fine-grained options framework, reasonable defaults, and informative output as in Wolfram Mathematica.
+     
+     + ```soyosoyo-ml-java``` [Java, built on Gradle]: syntactic sugar for ```soyosoyo-graphics-scala``` without scala fanciness
+
+     + ```soyosoyo-ml-kotlin``` [Kotlin, built on Gradle]: syntactic sugar for ```soyosoyo-graphics-scala``` without scala fanciness
 
 
-     1. ```soyosoyo-core``` []
+     + ```soyosoyo-notebook```: tbd, stand-alone Jupyter replacement, inspired by original Mathematica notebooks
+     
