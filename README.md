@@ -1,16 +1,18 @@
 # soyosoyo
 
-```soyosoyo``` is a test project that hopes to be a Numpy/SciPy for the JVM (Scala, Java, Kotlin), in 3-5 years (2025 timeframe). It seeks to fill the need for a performant (static-type, primitive backed) JVM framework, either for standalone use or as an optimizing supplement to commercial scientific packages such as Mathematica and Matlab.
+```soyosoyo``` is a test project that aspires to be a Numpy/SciPy for the JVM (Scala, Java, Kotlin), in 3-5 years (2025 timeframe). It seeks to fill the need for a performant (static-type, primitive backed) JVM framework, either for direct JVM use or as an optimizing supplement on JVM for commercial scientific programming environments such as Mathematica and Matlab.
 
-It is inspired by the Scala/JVM project ```scalanlp/breeze``` ("soyosoyo" is the onomatopoeia for a light breeze, in Japanese). However, it tries to eliminate Scala fanciness from the core code and core implementations, and thereby:
+Soyosoyo is heavily inspired by the Scala/JVM project ```scalanlp/breeze``` ("soyosoyo" is the onomatopoeia for a light breeze, in Japanese). However, it tries to eliminate Scala fanciness from the core code and core implementations, and thereby:
   + ensure Java/Kotlin compatibility and interoperability
   + maximize primitive use to prevent Autoboxing
-  + to make full use of JVM optimizations and speed benefits
-  + to be fully accessible from commercial scientific programming packages such as Mathematica and Matlab. 
+  + make full use of JVM just-in-time optimizations and speed benefits
+  + to be fully accessible from commercial scientific programming packages such as Mathematica and Matlab which feature good JVM connectivitz. 
   
-There are, of course, syntactic and algorithmic benefits that are only realizable in a backwards-compatibility-breaking language like Scala. Soyosoyo aims to capture these benefits by providing idiomatic Scala wrapper functions for each function, at each hierarchical level. The functionality of every package should be extensible and usable, in an idomatic function, with all three target JVM languages (Java, Scala, Kotlin).
+There are, of course, syntactic and algorithmic benefits that are only realizable in a backwards-compatibility-breaking language like Scala. Furthermore, some of the Scala syntax/libraries are fundamentally superior to Java or Kotlin, especially for functional programming, pattern matching, and parallelization/concurrent programming/collections. Soyosoyo aims to capture these Scala benefits by providing idiomatic Scala wrapper functions for each function, at each hierarchical level of implementation. There may even be the need to implement part of the core code in Scala for speed and programming ease. The functionality of every package should be extensible and usable, in an idomatic function, with all three target JVM languages (Java, Scala, Kotlin).
 
-In order to encapsulate version and compilation target issues, packages are divided relatively finely and hierarchically, and use JVM features which are cross-accessible:
+In order to encapsulate version and compilation target issues, packages are divided relatively finely and hierarchically, and use JVM features which are cross-accessible. On a binary level, the targets are Oracle JVM 8 (esp. for Matlab compatibility), Open JVM 11, and subsequent LTS releases of Open Java.
+
+Here is the proposed hierarchy of packages (and dependencies)
 
 + ```soyosoyo-base``` [Kotlin and Java, built on Gradle]: core data types, and functionality:
     + Immutable (and mutable) array types as light wrappers around Kotlin ```ArrayShort```, ```ArrayInt```, ```ArrayLong```, ```ArrayFloat```, ```ArrayDouble```, ```ArrayBoolean```. 
