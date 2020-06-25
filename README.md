@@ -32,10 +32,12 @@ Here is the proposed hierarchy of packages (and dependencies)
 
 + ```soyosoyo-base-scala``` [Scala, built on SBT]: Provides Scala-specific syntactic sugar and slicing functionality. Inherit from this instead of ```soyosoyo-base``` if downstream package is Scala-based (e.g. ```soyosoyo-graphics-scala```).
 
-     + ```soyosoyo-graphics-scala``` [Scala, built on SBT]: provide visualization fuctions, aim to reproduce basic functionality of the Wolfram Mathematica 2D graphics libraries, including movies, with publication-quality and highly-specifiable vector and bitmap outputs. Provide syntactic sugar for Scala.
+     + ```soyosoyo-graphics-scala``` [Scala, built on SBT]: provide visualization fuctions, aim to reproduce basic functionality of the Wolfram Mathematica 2D graphics libraries, including movies, with publication-quality and highly-specifiable vector and bitmap outputs. Provide syntactic sugar for Scala. Web and interactive graphics should probably be specified in a parallel but separate class structure, since many libraries falter when they try to integrate interactivity and publication-quality-static graphics into a single API.
      + ```soyosoyo-graphics-java``` [Java, built on Gradle]: syntactic sugar for ```soyosoyo-graphics-scala``` for Java
      + (If necessary) ```soyosoyo-graphics-kotlin``` [Java, Kotlin, built on Gradle]: very light wrapper of ```soyosoyo-graphics-java```
-     
+
+
+
      + ```soyosoyo-stats-scala``` [Scala, Kotlin and Java, built on SBT]: provide statistical fuctions, aim to reproduce basic functionality of R statistic libraries.
      + ```soyosoyo-stats-java``` [Java, built on Gradle]: syntactic sugar for ```soyosoyo-graphics-scala``` without scala fanciness
      + ```soyosoyo-stats-kotlin``` [Kotlin, built on Gradle]: syntactic sugar for ```soyosoyo-graphics-scala``` without scala fanciness
