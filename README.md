@@ -4,11 +4,12 @@
 
 Soyosoyo is heavily inspired by the Scala/JVM project ```scalanlp/breeze``` ("soyosoyo" is the onomatopoeia for a light breeze, in Japanese). However, it tries to eliminate Scala fanciness from the core code and core implementations, and thereby:
   + ensure Java/Kotlin compatibility and interoperability
-  + maximize primitive use and prevent Autoboxing
+  + explicitly maximize primitive use and prevent Autoboxing by operating in POJOs and wrapping Java Arrays
   + make full use of JVM just-in-time optimizations and speed benefits, including optimized tight loops for core functions
+  + create a performant full JVM package with no native dependencies.
   + to be fully accessible from commercial scientific programming packages such as Mathematica and Matlab, which feature JVM connectivity. 
   
-There are, of course, syntactic, algorithmic, and aesthetic benefits that are only realizable in a compatibility-breaking JVM language like Scala. Furthermore, some of the Scala syntax/libraries are fundamentally superior to Java or Kotlin, especially for functional programming, pattern matching, and parallelization/concurrent programming/collections. Soyosoyo aims to capture some Scala benefits by providing idiomatic Scala wrapper functions for each function, at each hierarchical level of implementation (even though the core APIs are fully Java interoperable). There may even be the need to implement part of the core code in Scala for speed and programming ease. The functionality of every package should be extensible and usable, in an idomatic function, with all three target JVM languages (Java, Scala, Kotlin), even when the code is written in Scala.
+There are, of course, syntactic, algorithmic, and aesthetic benefits that are only realizable in Scala. Furthermore, some of the Scala syntax/libraries are fundamentally superior to Java or Kotlin, especially for functional programming, pattern matching, and parallelization/concurrent programming/collections. Soyosoyo aims to capture some Scala benefits by providing idiomatic Scala wrapper functions for each function, at each hierarchical level of implementation (even though the core APIs are fully Java interoperable). There may even be the need to implement part of the core code in Scala for speed and programming ease. The functionality of every package should be extensible and usable, in an idomatic function, with all three target JVM languages (Java, Scala, Kotlin), even when the code is written in Scala.
 
 In order to encapsulate version and compilation target issues, packages are divided relatively finely and hierarchically, and use JVM features which are cross-accessible. On a binary level, the targets are Oracle JVM 8 (esp. for Matlab compatibility), Open JVM 11, and subsequent LTS releases of Open Java.
 
