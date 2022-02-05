@@ -6,12 +6,16 @@ ThisBuild / scalaVersion := "3.1.0"
 
 idePackagePrefix := Some("soyosoyo")
 
+//resolvers += Resolver.githubPackages("djspiewak")
 
+githubOwner := "ktakagaki"
 
-//lazy val core = project.in( file("core") )
-//  .settings(
-//    name := "core"
-//  )
+githubRepository := "soyosoyo"
+
+lazy val core = project.in( file("core") )
+  .settings(
+    name := "core"
+  )
 
 enablePlugins(PackPlugin)
 

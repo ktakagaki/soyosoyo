@@ -30,6 +30,13 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -47,8 +54,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -73,11 +82,41 @@
       <workItem from="1640533619493" duration="82000" />
       <workItem from="1640533713076" duration="1280000" />
       <workItem from="1640745498512" duration="632000" />
+      <workItem from="1640842749202" duration="3260000" />
+      <workItem from="1640941067033" duration="1191000" />
+      <workItem from="1641169681691" duration="627000" />
+      <workItem from="1641423187728" duration="2247000" />
+      <workItem from="1641965836828" duration="1194000" />
+      <workItem from="1641968230244" duration="385000" />
+      <workItem from="1641968776870" duration="556000" />
+      <workItem from="1642036924555" duration="562000" />
+      <workItem from="1642164768665" duration="498000" />
+      <workItem from="1642248359104" duration="587000" />
+      <workItem from="1642301748920" duration="591000" />
+      <workItem from="1642470995913" duration="1205000" />
+      <workItem from="1642683270558" duration="5000" />
+      <workItem from="1643026135411" duration="469000" />
+      <workItem from="1643026626913" duration="606000" />
+      <workItem from="1643986749272" duration="680000" />
+      <workItem from="1644016659718" duration="591000" />
+      <workItem from="1644027281582" duration="79000" />
+      <workItem from="1644044716339" duration="2502000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

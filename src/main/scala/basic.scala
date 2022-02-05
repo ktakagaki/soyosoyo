@@ -1,5 +1,5 @@
 package soyosoyo
 
-class basic extends Operations{
+class basic { //extends Operations{
 
 }
