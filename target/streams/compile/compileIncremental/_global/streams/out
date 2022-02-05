@@ -1,0 +1,38 @@
+[debug] [zinc] IncrementalCompile -----------
+[debug] IncrementalCompile.incrementalCompile
+[debug] previous = Stamps for: 7 products, 8 sources, 1 libraries
+[debug] current source = Set(${BASE}/src/main/scala/package.scala, ${BASE}/src/main/java/coreJ/DirectArrayOp.java, ${BASE}/src/main/scala/core/coreStats/CoreStats.scala, ${BASE}/src/main/scala/core/OperationsDirect.scala, ${BASE}/src/main/scala/basic.scala, ${BASE}/src/main/scala/core/arrays/ArrayAbstracts.scala, ${BASE}/src/main/scala/core/coreStats/CoreStatsDirect.scala, ${BASE}/src/main/scala/core/Operations.scala)
+[debug] > initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(${BASE}/src/main/scala/core/Operations.scala), unmodified = ...),Set(),Set(),API Changes: Set())
+[debug] 
+[debug] Initial source changes:
+[debug] 	removed: Set()
+[debug] 	added: Set()
+[debug] 	modified: Set(${BASE}/src/main/scala/core/Operations.scala)
+[debug] Invalidated products: Set()
+[debug] External API changes: API Changes: Set()
+[debug] Modified binary dependencies: Set()
+[debug] Initial directly invalidated classes: Set()
+[debug] Sources indirectly invalidated by:
+[debug] 	product: Set()
+[debug] 	binary dep: Set()
+[debug] 	external source: Set()
+[debug] All initially invalidated classes: Set()
+[debug] All initially invalidated sources:Set(${BASE}/src/main/scala/core/Operations.scala)
+[debug] Initial set of included nodes: 
+[debug] compilation cycle 1
+[info] compiling 1 Scala source to X:\DB\TtaM Dropbox\Kentaroh Takagaki\prog\soyosoyo\target\scala-3.1.1\classes ...
+[debug] Returning already retrieved and compiled bridge: C:\Users\Kenta\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala3-sbt-bridge\3.1.1\scala3-sbt-bridge-3.1.1.jar.
+[debug] [zinc] Running cached compiler 239676e9 for Scala Compiler version 3.1.1
+[debug] [zinc] The Scala compiler is invoked with:
+[debug] 	-bootclasspath
+[debug] 	C:\Users\Kenta\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala3-library_3\3.1.1\scala3-library_3-3.1.1.jar;C:\Users\Kenta\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.13.6\scala-library-2.13.6.jar
+[debug] 	-classpath
+[debug] 	X:\DB\TtaM Dropbox\Kentaroh Takagaki\prog\soyosoyo\target\scala-3.1.1\classes
+[debug] Scala compilation took 0.0540645 s
+[info] done compiling
+[debug] New invalidations:
+[debug] Initial set of included nodes: 
+[debug] Previously invalidated, but (transitively) depend on new invalidations:
+[debug] Final step, transitive dependencies:
+[debug] 	Set()
+[debug] No classes were invalidated.

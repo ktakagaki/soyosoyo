@@ -1,21 +1,8 @@
-name := "soyosoyo"
-
 ThisBuild / version := "0.1.0-SNAPSHOT"
 
-ThisBuild / scalaVersion := "3.1.0"
+ThisBuild / scalaVersion := "3.1.1"
 
-idePackagePrefix := Some("soyosoyo")
-
-//resolvers += Resolver.githubPackages("djspiewak")
-
-githubOwner := "ktakagaki"
-
-githubRepository := "soyosoyo"
-
-lazy val core = project.in( file("core") )
+lazy val root = (project in file("."))
   .settings(
-    name := "core"
+    name := "soyosoyo"
   )
-
-enablePlugins(PackPlugin)
-

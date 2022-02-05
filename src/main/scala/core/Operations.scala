@@ -1,6 +1,6 @@
-package soyosoyo
-package core
-
+//package soyosoyo
+//package core
+//
 //final trait Operations {
 //
 //}
